@@ -145,9 +145,9 @@ export default function QuizPage({ id, setValue }) {
             <div>{quizView?.title}</div>
             <div className="flex gap-4" >
               {/* Displaying  the timer in the top right corner */}
-              <div style={{ position: 'fixed', top: '2px', right: '2px', backgroundColor: '#2196F3', padding: '8px', borderRadius: '4px', color: 'white',height:'60px' }}>
+              <div className="fixed top-4 right-4 bg-blue-500 p-2 rounded text-white" >
                 {showWarning && <div style={{ color: 'red' }}>Time is running out!</div>}
-                  {timeLeft !== null && (
+                {timeLeft !== null && (
                   <div>{Math.floor(timeLeft / 60)}:{(timeLeft % 60).toLocaleString('en-US', { minimumIntegerDigits: 2, useGrouping: false })}</div>
                 )}
               </div>
