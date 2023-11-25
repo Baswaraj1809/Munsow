@@ -148,7 +148,8 @@ export default function QuizPage({ id, setValue }) {
               <div style={{ position: 'fixed', top: '2px', right: '2px', backgroundColor: '#2196F3', padding: '8px', borderRadius: '4px', color: 'white',height:'60px' }}>
                 {showWarning && <div style={{ color: 'red' }}>Time is running out!</div>}
                   {timeLeft !== null && (
-                  <div>{Math.floor(timeLeft / 60)}:{(timeLeft % 60).toLocaleString('en-US', { minimumIntegerDigits: 2, useGrouping: false })}</div>
+                  // <div>{Math.floor(timeLeft / 60)}:{(timeLeft % 60).toLocaleString('en-US', { minimumIntegerDigits: 2, useGrouping: false })}</div>
+                  <div>{Math.floor(timeLeft / 60)}:{(timeLeft % 60).toLocaleString(undefined, { minimumIntegerDigits: 2, useGrouping: false })}</div>
                 )}
               </div>
               <Button
